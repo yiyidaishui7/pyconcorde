@@ -34,6 +34,8 @@ from setuptools.command.build_ext import build_ext as _build_ext
 from Cython.Build import cythonize
 
 import numpy as np
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
 
 QSOPT_LOCATION = {
     "Darwin": {
